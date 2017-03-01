@@ -22,12 +22,15 @@
     ctx.lineTo(100,100);
    
    //draw rectangle
-   ctx.rect(10,20,50,75);
+   ctx.rect(10,10,50,50);
 
+   ctx.strokeRect(20,20,40,40);
+   ctx.fillRect(25,25,30,30);
    // draw circle
    ctx.beginPath();
    ctx.arc(50,50,50,0,Math.PI);
 
+   // actually draw the path
     ctx.stroke();
     </script>
 </body>

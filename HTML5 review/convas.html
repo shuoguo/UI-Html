@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>canvas draw test</title>
+</head>
+<canvas id="ca" width="200" height="200" style="border:1 px solid red">
+</canvas>
+<body>
+<pre> 
+    step 1  find canvas Element
+    step 2  create draw obj , get context from canvas Element
+    step 3  draw on canvas
+
+</pre>
+
+
+    <script>
+    var can=document.getElementById("ca");
+    var ctx= can.getContext("2d");
+   // draw line 
+    ctx.moveTo(50,50);
+    ctx.lineTo(100,100);
+   
+   //draw rectangle
+   ctx.rect(10,20,50,75);
+
+   // draw circle
+   ctx.beginPath();
+   ctx.arc(50,50,50,0,Math.PI);
+
+    ctx.stroke();
+    </script>
+</body>
+
+
+</html>

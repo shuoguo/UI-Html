@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+    
+    </head>
+   <Style>
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border:solid 1px black;
+
+  display: flex;
+  /*flex direction, wrap*/
+  flex-flow: row wrap;
+  /*main axis space btwn col*/
+  justify-content: space-around;  
+  /*cross axis*/
+  align-items:flex-start;
+  /*cross axis space btwn row*/
+  align-content:space-between;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  border:solid 1px green;
+  /*flex-grow:1;
+  flex-shrink:1;*/
+  flex-basis:auto;
+
+  /*text*/
+  line-height: 100px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 3em;
+  /*horizental */
+  text-align: center;
+  /*vertical-align: middle;*/
+  
+}
+   </style>
+
+    <body>
+    
+    <ul class="flex-container">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+    </ul>
+    </body>
+
+</html>

@@ -3,8 +3,7 @@
 <head>
     <title>canvas draw test</title>
 </head>
-<canvas id="ca" width="200" height="200" style="border:1 px solid red">
-</canvas>
+
 <body>
 <pre> 
     step 1  find canvas Element
@@ -12,7 +11,8 @@
     step 3  draw on canvas
 
 </pre>
-
+<canvas id="ca" width="200" height="200" style="border:1 px solid red">
+</canvas>
 
     <script>
     var can=document.getElementById("ca");
@@ -24,13 +24,16 @@
    
    //draw rectangle
    ctx.rect(10,10,50,50);
-
+   //draw tectangle
    ctx.strokeRect(20,20,40,40);
    ctx.fillRect(25,25,30,30);
    // draw circle
    ctx.beginPath();
    ctx.arc(50,50,50,0,Math.PI);
 
+   //draw text
+   ctx.fillText("this is a test",100,50);
+   ctx.font = "30px Arial";
    // actually draw the path
     ctx.stroke();
     </script>

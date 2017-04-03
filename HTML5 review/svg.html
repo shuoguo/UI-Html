@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <title> svg graph</title>
+</head>
+<Style>
+svg{
+    float:left;
+    border:1px solid pink;
+}
+</style>
+<body>
+    <!--resulution independent-->
+    <!--xml based-->
+    <!--rendering slow-->
+
+    <h1>circle</h1>
+   
+    <svg width="200" height="200">
+        <circle cx="60" cy="60" r="50" stroke="green" fill="red" stroke-width="4"/>
+    </svg>
+   
+    <svg width="200" height="200">
+        <rect x="50" y="50" width="50" height="50" stroke="blue" stroke-width="5px" fill="yellow">
+    <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="20s"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            repeatCount="indefinite"
+        />
+        </rect>
+    </svg>
+
+  <g>
+    <svg width="200" height="200">
+        <rect x="10" y="10" width="50" height="50" stroke="blue" stroke-width="5px" fill="yellow" transform="rotate(15,10,10)"/>
+    </svg>
+    <svg width="200" height="200">
+        <rect x="10" y="10" width="50" height="50" stroke="blue" stroke-width="5px" fill="yellow" transform="scale(1.5,2)"/>
+    </svg>
+  </g>
+
+    <svg width="200" height="200">
+        <rect x="10" y="10" rx="20" ry="20" width="50" height="50" stroke="blue" stroke-width="2px" fill="yellow"/>
+    </svg>
+
+    <svg width="200" height="200">
+        <ellipse cx="100" cy="50" rx="50" ry="20" stroke="green" stroke-width="3" fill="red"/>
+    </svg>
+
+    <svg width="200" height="200">
+        <line x1="0" y1="0" x2="100" y2="100" style="stroke-width:3;stroke:grey;fill:lime;"/>
+    </svg>
+
+     <svg width="200" height="200">
+        <polygon points="10,10 100,30 50,50" style="stroke-width:3;stroke:purple;fill:aqua;"/>
+    </svg>
+
+    <svg width="200" height="200">
+        <polygon points="100,10 170,100 10,50 190,50 30,100" style="stroke-width:3;stroke:purple;fill:aqua;fill-rule:evenodd"/>
+    </svg>
+
+     <svg width="200" height="200">
+        <polyline points="100,10 170,100 10,50 190,50 30,100" style="stroke-width:3;stroke:purple;fill:aqua;fill-rule:nozero"/>
+    </svg>
+    <!--for complex use svg graph editor-->
+    <svg height="200" width="200">
+        <path d="M150 10 L75 140 L100 150 Z" />
+    </svg>
+
+    <svg width="200" height="200">
+        <text x="50" y="50" style="fill:blue;transform:rotate(30 20,40)">this is a test</text>
+    </svg>
+
+    <svg width="200" height="200">
+        <circle cx="60" cy="60" r="50" stroke="green" fill="red" stroke-width="4"/>
+        <circle cx="60" cy="60" r="30" stroke="red" fill="pink" stroke-width="3"/>
+    </svg>
+
+    <svg width="200" height="200">
+        <defs>
+            <filter id="f1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15">
+            </filter>
+        </defs>
+        <rect x="20" y="20" width="50" height="100" stroke="green" fill="red" filter="url(#f1)"/>
+    </svg>
+</body>
+
+</html>
